@@ -160,3 +160,105 @@ body {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+.post-container {
+    max-width: 720px;
+    margin: auto;
+    padding: 20px;
+}
+
+.novel-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.cover-wrapper img {
+    width: 100%;
+    border-radius: 6px;
+    filter: blur(0.3px);
+    image-rendering: auto;
+}
+
+.section {
+    margin-top: 25px;
+}
+
+.section-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    border-left: 4px solid var(--red);
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.genre-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.genre-list span {
+    background: var(--card);
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: 1px solid #444;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.download-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn.pdf {
+    background: var(--red);
+}
+
+.btn.epub {
+    background: var(--blue);
+}
+    /* FORCE Disqus to be smaller and cleaner */
+.comment-wrapper-force {
+    max-width: 720px;        /* controls overall width */
+    margin: 40px auto;
+    padding: 0 12px;
+}
+
+/* Inner box */
+.comment-content-box {
+    transform: scale(0.9);   /* visually shrink Disqus */
+    transform-origin: top center;
+}
+
+/* Prevent Disqus from stretching full width */
+#disqus_thread {
+    max-width: 100%;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+    .comment-wrapper-force {
+        max-width: 100%;
+    }
+
+    .comment-content-box {
+        transform: scale(0.95);
+    }
+    }
