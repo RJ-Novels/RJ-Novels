@@ -42,31 +42,29 @@
         </div>
     </section>
 </main>
-<div class="comment-wrapper">
+<div class="comment-wrapper-force">
     
-    <div id="disqus_thread"></div>
-    
-    <script>
-        /**
-        * IMPORTANT: You MUST edit the 'this.page.url' and 'this.page.identifier' 
-        * for EACH unique novel page you create.
-        */
-        var disqus_config = function () {
-            // 1. Replace with the full URL of the current page
-            this.page.url = 'https://YOUR-PAGE-URL-HERE';
-            // 2. Replace with a unique ID for this specific novel
-            this.page.identifier = 'UNIQUE_NOVEL_IDENTIFIER'; 
-        };
-        
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://rj-novels.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div class="comment-content-box">
 
+        <div id="disqus_thread"></div>
+        
+        <script>
+            // --- (Your standard Disqus script remains here) ---
+            var disqus_config = function () {
+                this.page.url = 'https://YOUR-PAGE-URL-HERE';
+                this.page.identifier = 'UNIQUE_NOVEL_IDENTIFIER'; 
+            };
+            
+            (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://rj-novels.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    
 </div>
 </body>
 </html>
