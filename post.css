@@ -92,20 +92,31 @@ body {
 .btn.epub {
     background: var(--blue);
 }
-.comment-wrapper {
+    /* ... (rest of the detail page styles) ... */
+
+    /* 💥 FORCE FIX 1: The main boundary ("Baria") */
+    .comment-wrapper-force {
         margin-top: 40px;
         padding: 10px;
-        background-color: var(--card-bg); /* Dark background */
+        background-color: var(--card-bg); /* Dark background for the wrapper */
         border: 2px solid var(--border-color); /* The visual "Baria" border */
         border-radius: 5px;
+        /* Set a large margin-bottom to ensure the bottom border is visible */
+        margin-bottom: 50px; 
+    }
 
-        /* Force height limit and enable scrolling */
-        max-height: 450px; /* Adjust this value to set the height limit */
+    /* 💥 FORCE FIX 2: The inner content box that controls the scroll */
+    .comment-content-box {
+        /* Set the fixed height limit */
+        max-height: 500px; /* Adjust this value to set the height limit */
         overflow-y: auto; 
+        /* Ensure the content starts cleanly inside the wrapper */
+        padding: 0;
+        margin: 0;
     }
     
-    /* Ensure the inner Disqus thread fits within the wrapper */
+    /* Ensure the inner Disqus thread itself doesn't apply extra margins */
     #disqus_thread {
         margin: 0;
         padding: 0;
-            }
+    }
