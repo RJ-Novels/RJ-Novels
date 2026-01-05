@@ -140,3 +140,11 @@ body {
 .read-more-btn:hover {
     text-decoration: underline;
     }
+#disqus_thread {
+        margin-top: 40px;
+        /* 💥 FIX: Limit the height and add scrolling 💥 */
+        max-height: 400px; /* Adjust this value (e.g., 400px) to control the size */
+        overflow-y: auto;  /* Adds a scrollbar when content exceeds max-height */
+        border-top: 1px solid var(--border-color); /* Optional: Visual separator */
+        padding-top: 10px;
+    }
