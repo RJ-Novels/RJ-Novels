@@ -15,6 +15,13 @@ body {
     color: var(--text);
 }
 
+.post-body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+}
+
 /* TOP BAR */
 .top-bar {
     display: flex;
