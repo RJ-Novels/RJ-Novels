@@ -92,3 +92,20 @@ body {
 .btn.epub {
     background: var(--blue);
 }
+.comment-wrapper {
+        margin-top: 40px;
+        padding: 10px;
+        background-color: var(--card-bg); /* Dark background */
+        border: 2px solid var(--border-color); /* The visual "Baria" border */
+        border-radius: 5px;
+
+        /* Force height limit and enable scrolling */
+        max-height: 450px; /* Adjust this value to set the height limit */
+        overflow-y: auto; 
+    }
+    
+    /* Ensure the inner Disqus thread fits within the wrapper */
+    #disqus_thread {
+        margin: 0;
+        padding: 0;
+            }
