@@ -22,20 +22,13 @@
             <span>School Life</span>
         </div>
     </section>
-    <section class="post-section">
-  <h3 class="section-title">Description</h3>
-
-  <div class="desc-box">
-            <p class="desc-text" id="descText">“I’m only doing something like this for Senpai alone……”</p>
-<p class="desc-text" id="descText">The Academy’s Number One Cutest Kouhai Becomes a Fiancée and Commuting Wife!? A Half-Cohabitation Pure Love Romcom!</p>
-<p class="desc-text" id="descText">Midou Tomoya, who has advanced to his second year of high school, ends up saving the incoming first-year student, Shirazu Yuuka—rumored throughout the school to be one of its foremost beautiful girls—from a traffic accident.</p>
-<p class="desc-text" id="descText">He believes that his involvement with her concludes right there on the spot——or so he thinks, only to be informed by his father, who is away on an extended business trip, that Yuuka has now become his fiancée.</p>
-<p class="desc-text" id="descText">“Until Senpai’s injury heals, I will personally attend to all the matters of your daily life!”</p>
-<p class="desc-text" id="descText">Upon witnessing the sight of Tomoya, who sustained an injury to his dominant arm during the very act of rescuing her, Yuuka boldly declares that she will surpass even the role of fiancée and instead become his commuting wife, going so far as to make this proclamation without hesitation.</p>
-<p class="desc-text" id="descText">“Senpai’s body—I will wash it thoroughly clean for you, all right!”</p>
-<p class="desc-text" id="descText">This pure and utterly innocent commuting wife becomes utterly desperate in her efforts to devote herself completely, to the point where her sense of personal distance and boundaries ends up being utterly askew and off-kilter……?
-A half-cohabitation pure love romcom shared with a bold kouhai commuting wife, raised in the refined traditions of an ojousama upbringing!
-        </p>
+    <section class="section">
+        <h2 class="section-header">Description</h2>
+        <p class="description"><p>“I’m only doing something like this for Senpai alone……”</p>
+        <p>The Academy’s Number One Cutest Kouhai Becomes a Fiancée and Commuting Wife!? A Half-Cohabitation Pure Love Romcom!</p>
+<p>Midou Tomoya, who has advanced to his second year of high school, ends up saving the incoming first-year student, Shirazu Yuuka—rumored throughout the school to be one of its foremost beautiful girls—from a traffic accident.</p>
+<p>He believes that his involvement with her concludes right there on the spot——or so he thinks, only to be informed by his father, who is away on an extended business trip, that Yuuka has now become his fiancée.</p>
+    </p>
     <button class="read-more-btn" id="readMoreBtn">
       Read More
     </button>
@@ -49,26 +42,31 @@ A half-cohabitation pure love romcom shared with a bold kouhai commuting wife, r
         </div>
     </section>
 </main>
-<script src="post.js"></script>
-<div id="disqus_thread"></div>
-        <script>
-            /**
-            * IMPORTANT: You MUST set the correct URL and identifier for each unique novel page.
-            */
-            var disqus_config = function () {
-            // Replace the values below with the unique URL and identifier for *this specific novel page*
-            this.page.url = 'https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO-NAME/the-case-of-two-sisters.html';
-            this.page.identifier = 'the-case-of-two-sisters-novel-id'; 
-            };
-            
-            (function() { // DON'T EDIT BELOW THIS LINE
+<div class="comment-wrapper">
+    
+    <div id="disqus_thread"></div>
+    
+    <script>
+        /**
+        * IMPORTANT: You MUST edit the 'this.page.url' and 'this.page.identifier' 
+        * for EACH unique novel page you create.
+        */
+        var disqus_config = function () {
+            // 1. Replace with the full URL of the current page
+            this.page.url = 'https://YOUR-PAGE-URL-HERE';
+            // 2. Replace with a unique ID for this specific novel
+            this.page.identifier = 'UNIQUE_NOVEL_IDENTIFIER'; 
+        };
+        
+        (function() { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
             s.src = 'https://rj-novels.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
 </body>
 </html>
