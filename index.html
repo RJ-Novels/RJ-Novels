@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RJ Novels</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav id="sidebar" class="sidebar">
+    <a class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="https://discord.gg/yBkWrdqgSR">Discord</a>
+    <a href="https://t.me/rj_novels">Telegram</a>
+    <a href="https://www.facebook.com/profile.php?id=61568112261872">Facebook</a>
+</nav>
+
+<!-- HEADER -->
+<header class="top-bar">
+    <i class="fa-solid fa-bars menu-btn" onclick="openNav()"></i>
+    <h1>RJ Novels</h1>
+</header>
+
+<!-- SEARCH -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search novels...">
+</div>
+
+<!-- CATEGORY BUTTONS -->
+<div class="category-buttons">
+    <button class="cat-btn active" data-category="all">All</button>
+    <button class="cat-btn" data-category="light">Light Novels</button>
+    <button class="cat-btn" data-category="web">Web Novels</button>
+</div>
+
+<!-- GRID -->
+<main class="novel-grid">
+
+    <div class="novel-card"
+         data-category="light"
+         data-search-title="If I Become the Lifesaver of the Single Most Adorable Kouhai in the Academy, She Becomes a Commuting Wife and Comes Pressing for a Relationship | 学園一かわいい後輩の命の恩人になったら、通い妻になって関係を迫ってくる。"
+         data-link="posts/two-sisters.html">
+
+        <div class="cover-box">
+            <img src="https://i.postimg.cc/kGDrsrny/IMG-20260105-164740-818.jpg">
+            <span class="tag light">Light Novel</span>
+        </div>
+        <p class="title">If I Become the Lifesaver of the Single Most Adorable Kouhai in the Academy, She Becomes a Commuting Wife and Comes Pressing for a Relationship</p>
+    </div>
+    <div class="novel-card"
+         data-category="light"
+         data-search-title="The Cheeky Junior Gal Becomes Too Cute When She Gets Attached to Me | タメ口後輩ギャルが懐いたら、さすがに可愛すぎる | Tamekuchi koohai GAL ga natsuitara, sasuga ni kawaisugiru"
+         data-link="post2.html">
+
+        <div class="cover-box">
+            <img src="https://i.postimg.cc/5t3VfChj/641288fd-3f3b-49ba-8aae-90668601bf3e_1759426705669.jpg">
+            <span class="tag light">Light Novel</span>
+        </div>
+        <p class="title">The Cheeky Junior Gal Becomes Too Cute When She Gets Attached to Me</p>
+    </div>
+<div class="novel-card"
+         data-category="light"
+         data-search-title="The Secret Life Of An Honor Student | 優等生のウラのカオ　～実は裏アカ女子だった隣の席の美少女と放課後二人きり～ | Yūtōsei no Ura no Kao ~ jitsuwa ura aka joshidatta tonari no seki no bishōjo to hōkago futarikiri ~"
+         data-link="post3.html">
+
+        <div class="cover-box">
+            <img src="https://i.postimg.cc/5tP4HgdD/b9ec7c89-edad-4c29-b03c-d4f4596fc48c.jpg">
+            <span class="tag light">Light Novel</span>
+        </div>
+        <p class="title">The Secret Life Of An Honor Student</p>
+    </div>
+<div class="novel-card"
+         data-category="light"
+         data-search-title="こそっと恥じらう姿を俺だけに見せてくる学園のお姫さま | Kosotto Hajirau Sugata wo Ore dake ni Misete kuru Gakuen no Ohime-sama"
+         data-link="post4.html">
+
+        <div class="cover-box">
+            <img src="https://i.postimg.cc/yxNM6Mt0/IMG_20260105_172300_198.jpg">
+            <span class="tag light">Light Novel</span>
+        </div>
+        <p class="title">Kosotto Hajirau Sugata wo Ore dake ni Misete kuru Gakuen no Ohime-sama</p>
+    </div>
+<div class="novel-card"
+         data-category="light"
+         data-search-title="Tier1姉妹　有名四姉妹は僕なしでは生きられない | Tier 1 shimai yūmei yonshimai wa boku nashide wa iki rarenai | Tier 1 Sisters: The Four Famous Sisters Can’t Live Without Me"
+         data-link="post5.html">
+
+        <div class="cover-box">
+            <img src="https://i.postimg.cc/bNk7y9Fg/IMG_20260105_172713_330.jpg">
+            <span class="tag light">Light Novel</span>
+        </div>
+        <p class="title">Tier 1 Sisters: The Four Famous Sisters Can’t Live Without Me</p>
+    </div>
+<div class="novel-card"
+         data-category="web"
+         data-search-title="どもども、部活やめた同盟です！| Hey Hey, We’re the Club-Quitters Alliance!"
+         data-link="post6.html">
+
+        <div class="cover-box">
+            <img src="https://i.postimg.cc/NMzYdvC2/RpwhYw6J_o.jpg">
+            <span class="tag web">Web Novel</span>
+        </div>
+        <p class="title">Hey Hey, We’re the Club-Quitters Alliance!</p>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

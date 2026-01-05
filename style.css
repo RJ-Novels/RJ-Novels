@@ -1,0 +1,162 @@
+:root {
+    --bg: #1e1e1e;
+    --card: #2a2a2a;
+    --text: #f1f1f1;
+    --red: #cc0000;
+    --blue: #007bff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #333;
+    padding: 12px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.menu-btn {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #111;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 20;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 30px;
+    color: #bbb;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+.sidebar a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* SEARCH */
+.search-box {
+    padding: 10px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 10px;
+    background: var(--card);
+    border: 1px solid #444;
+    color: var(--text);
+    border-radius: 5px;
+}
+
+/* CATEGORY */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.cat-btn {
+    padding: 6px 14px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--red);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cat-btn.active {
+    background: var(--red);
+}
+
+/* GRID */
+.novel-grid {
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* CARD */
+.novel-card {
+    background: var(--card);
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* COVER */
+.cover-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 133%;
+}
+
+.cover-box img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TAG */
+.tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px 6px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    border-bottom-right-radius: 4px;
+}
+
+.tag.light { background: var(--red); }
+.tag.web { background: var(--blue); }
+
+/* TITLE */
+.title {
+    margin: 6px 0 0;
+    font-size: 14px;
+    line-height: 1.3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
