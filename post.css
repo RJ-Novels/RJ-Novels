@@ -92,31 +92,32 @@ body {
 .btn.epub {
     background: var(--blue);
 }
-    /* ... (rest of the detail page styles) ... */
+    /* FORCE Disqus to be smaller and cleaner */
+.comment-wrapper-force {
+    max-width: 720px;        /* controls overall width */
+    margin: 40px auto;
+    padding: 0 12px;
+}
 
-    /* 💥 FORCE FIX 1: The main boundary ("Baria") */
+/* Inner box */
+.comment-content-box {
+    transform: scale(0.9);   /* visually shrink Disqus */
+    transform-origin: top center;
+}
+
+/* Prevent Disqus from stretching full width */
+#disqus_thread {
+    max-width: 100%;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
     .comment-wrapper-force {
-        margin-top: 40px;
-        padding: 10px;
-        background-color: var(--card-bg); /* Dark background for the wrapper */
-        border: 2px solid var(--border-color); /* The visual "Baria" border */
-        border-radius: 5px;
-        /* Set a large margin-bottom to ensure the bottom border is visible */
-        margin-bottom: 50px; 
+        max-width: 100%;
     }
 
-    /* 💥 FORCE FIX 2: The inner content box that controls the scroll */
     .comment-content-box {
-        /* Set the fixed height limit */
-        max-height: 500px; /* Adjust this value to set the height limit */
-        overflow-y: auto; 
-        /* Ensure the content starts cleanly inside the wrapper */
-        padding: 0;
-        margin: 0;
+        transform: scale(0.95);
+    }
     }
     
-    /* Ensure the inner Disqus thread itself doesn't apply extra margins */
-    #disqus_thread {
-        margin: 0;
-        padding: 0;
-    }
