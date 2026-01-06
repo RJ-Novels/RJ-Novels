@@ -296,11 +296,11 @@ body {
 /* SCROLL TO TOP BUTTON (INDEX ONLY) */
 #scrollTopBtn {
     position: fixed;
-    bottom: 10px;
+    bottom: 30px;
     right: 20px;
     width: 55px;
     height: 55px;
-    border-radius: 53.5%;
+    border-radius: 52%;
     background: #333333;
     color: #fff;
     font-size: 26px;
