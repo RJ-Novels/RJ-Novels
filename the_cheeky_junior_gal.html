@@ -1,32 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <!-- SIDEBAR -->
-<nav id="sidebar" class="sidebar">
-    <a class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html">Home</a>
-    <a href="https://discord.gg/yBkWrdqgSR">Discord</a>
-    <a href="https://t.me/rj_novels">Telegram</a>
-    <a href="https://www.facebook.com/profile.php?id=61568112261872">Facebook</a>
-</nav>
+---
+layout: default
+title: The Cheeky Junior Gal Becomes Too Cute When She Gets Attached to Me
+---
 
-<!-- HEADER -->
-<header class="top-bar">
-    <i class="fa-solid fa-bars menu-btn" onclick="openNav()"></i>
-    <h1>RJ Novels</h1>
-</header>
 <main class="post-container">
-    <h1 class="novel-title">The Cheeky Junior Gal Becomes Too Cute When She Gets Attached to Me</h1>
+
+    <h1 class="novel-title">
+        The Cheeky Junior Gal Becomes Too Cute When She Gets Attached to Me
+    </h1>
+
     <div class="cover-wrapper">
         <img src="https://i.postimg.cc/5t3VfChj/641288fd-3f3b-49ba-8aae-90668601bf3e_1759426705669.jpg" alt="Novel Cover">
     </div>
+
     <section class="section">
         <h2 class="section-header">Genres</h2>
         <div class="genre-list">
@@ -36,15 +22,22 @@
             <span>School Life</span>
         </div>
     </section>
+
     <section class="section">
         <h2 class="section-header">Description</h2>
-        <div class="description"><p>In the autumn of his second year of high school, Tsujidou Masachika had just been appointed as the student council president when he found himself helping a student who was suspected of smoking in school.</p>
-<p>Her name was Ooba Monaka, a junior gal rumored to be a beautiful girl.</p>
-<p>He helped her on a whim, with no intention of getting involved. At least, that’s what he thought until…</p>
-<p>“I’ll do anything to thank you, Senpai~”</p>
-<p>For some reason, she became extremely attached to him!</p>
-    </div>
-</section>
+        <div class="description">
+            <p>In the autumn of his second year of high school, Tsujidou Masachika had just been appointed as the student council president when he found himself helping a student who was suspected of smoking in school.</p>
+
+            <p>Her name was Ooba Monaka, a junior gal rumored to be a beautiful girl.</p>
+
+            <p>He helped her on a whim, with no intention of getting involved. At least, that’s what he thought until…</p>
+
+            <p>“I’ll do anything to thank you, Senpai~”</p>
+
+            <p>For some reason, she became extremely attached to him!</p>
+        </div>
+    </section>
+
     <section class="section">
         <h2 class="section-header">Volume 2</h2>
         <div class="download-buttons">
@@ -52,31 +45,29 @@
             <a href="https://link-hub.net/1276410/uNIolbitmI0P" class="btn epub">EPUB</a>
         </div>
     </section>
-</main>
-<div class="comment-wrapper-force">
-    
-    <div class="comment-content-box">
 
+</main>
+
+<div class="comment-wrapper-force">
+    <div class="comment-content-box">
         <div id="disqus_thread"></div>
-        
+
         <script>
-            // --- (Your standard Disqus script remains here) ---
             var disqus_config = function () {
-                this.page.url = 'https://rj-novels.github.io/RJ-Novels/the_cheeky_junior_gal.html';
-                this.page.identifier = 'the_cheeky_junior_gal_Becomes_Too_Cute_When_She_Get_ Attached_to_Me'; 
+                this.page.url = "{{ page.url | absolute_url }}";
+                this.page.identifier = "{{ page.url }}";
             };
-            
-            (function() { 
+
+            (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://rj-novels.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <noscript>
+            Please enable JavaScript to view the comments powered by Disqus.
+        </noscript>
     </div>
-    
-</div>
-    <script src="script.js"></script>
-</body>
-</html>
+    </div>
