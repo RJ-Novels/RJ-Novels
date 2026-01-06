@@ -48,10 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
                           </script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Force all titles inside links in saved grid to have correct color
+  // Remove underline from all links inside saved grid
+  document.querySelectorAll("#savedGrid .novel-card a").forEach(link => {
+    link.style.textDecoration = "none"; // remove underline
+  });
+
+  // Also remove underline from any child title elements
   document.querySelectorAll("#savedGrid .novel-card a .title").forEach(title => {
-    title.style.color = "var(--text)";      
-    title.style.textDecoration = "none";    
+    title.style.textDecoration = "none";
   });
 });
 </script>
