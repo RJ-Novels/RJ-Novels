@@ -42,13 +42,6 @@
 {% endif %}
 
 <main>
-    <button class="save-btn"
-  data-id="{{ page.url }}"
-  data-title="{{ page.title }}"
-  data-url="{{ page.url | relative_url }}"
-  data-img="{{ page.cover }}">
-  <i class="fa-solid fa-bookmark"></i>
-    </button>
     {{ content }}
     {% if page.comments %}
 <div class="comment-wrapper-force">
