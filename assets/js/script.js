@@ -64,38 +64,52 @@ if (scrollBtn) {
         });
     });
                 }
-/* SAVED POST */
-function getSaved() {
+/* =========================
+   SAVE / UNSAVE SYSTEM
+========================= */
+
+function getSavedNovels() {
   return JSON.parse(localStorage.getItem("savedNovels")) || [];
 }
 
-function toggleSave(novel) {
-  let saved = getSaved();
-  const exists = saved.find(n => n.id === novel.id);
-
-  if (exists) {
-    saved = saved.filter(n => n.id !== novel.id);
-  } else {
-    saved.push(novel);
-  }
-
-  localStorage.setItem("savedNovels", JSON.stringify(saved));
+function setSavedNovels(data) {
+  localStorage.setItem("savedNovels", JSON.stringify(data));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const saved = getSavedNovels();
+
   document.querySelectorAll(".save-btn").forEach(btn => {
+    const id = btn.dataset.id;
+
+    /* restore saved state on load */
+    if (saved.some(novel => novel.id === id)) {
+      btn.classList.add("saved");
+    }
+
     btn.addEventListener("click", e => {
-      e.stopPropagation();
       e.preventDefault();
+      e.stopPropagation();
 
-      toggleSave({
-        id: btn.dataset.id,
-        title: btn.dataset.title,
-        url: btn.dataset.url,
-        img: btn.dataset.img
-      });
+      let savedNow = getSavedNovels();
+      const index = savedNow.findIndex(novel => novel.id === id);
 
-      btn.classList.toggle("saved");
+      if (index !== -1) {
+        /* UNSAVE */
+        savedNow.splice(index, 1);
+        btn.classList.remove("saved");
+      } else {
+        /* SAVE */
+        savedNow.push({
+          id: btn.dataset.id,
+          title: btn.dataset.title,
+          url: btn.dataset.url,
+          img: btn.dataset.img
+        });
+        btn.classList.add("saved");
+      }
+
+      setSavedNovels(savedNow);
     });
   });
 });
