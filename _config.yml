@@ -1,5 +1,6 @@
 title: RJ Novels
 description: Light Novels & Web Novels PDF/EPUB
+
 url: "https://rj-novels.github.io"
 baseurl: "/RJ-Novels"
 
@@ -9,7 +10,8 @@ markdown: kramdown
 
 liquid:
   error_mode: warn
-  collections:
+
+collections:
   novels:
     output: true
     permalink: /:name/
