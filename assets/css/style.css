@@ -296,12 +296,12 @@ body {
 /* SCROLL TO TOP BUTTON (INDEX ONLY) */
 #scrollTopBtn {
     position: fixed;
-    bottom: 22px;
-    right: 22px;
-    width: 42px;
-    height: 42px;
+    bottom: 20px;
+    right: 21px;
+    width: 43px;
+    height: 43px;
     border-radius: 50%;
-    background: #cc0000;
+    background: #333333;
     color: #fff;
     font-size: 18px;
     border: none;
@@ -314,5 +314,5 @@ body {
 
 #scrollTopBtn:hover {
     transform: translateY(-3px);
-    background: #e00000;
+    background: #333333;
 }
