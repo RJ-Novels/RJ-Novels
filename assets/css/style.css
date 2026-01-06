@@ -338,3 +338,6 @@ body {
 .save-btn.saved {
   color: #ff5b7f;
     }
+#savedGrid .novel-card .title {
+    color: var(--text) !important;
+    }
