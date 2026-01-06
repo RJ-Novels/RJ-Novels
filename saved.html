@@ -1,17 +1,27 @@
-<div id="savedGrid"></div>
+---
+layout: default
+title: Saved Novels
+permalink: /saved/
+---
+<h2>Saved Novels</h2>
+<div id="savedGrid" class="novel-grid"></div>
 
 <script>
 const grid = document.getElementById("savedGrid");
-const saved = JSON.parse(localStorage.getItem("savedPosts")) || [];
+const saved = JSON.parse(localStorage.getItem("savedNovels")) || [];
 
-saved.forEach(post => {
-  grid.innerHTML += `
-    <article class="card">
-      <a href="${post.url}">
-        <img src="${post.img}">
-        <h3>${post.title}</h3>
-      </a>
-    </article>
-  `;
-});
+if (saved.length === 0) {
+  grid.innerHTML = "<p>No saved novels yet.</p>";
+} else {
+  saved.forEach(novel => {
+    grid.innerHTML += `
+      <div class="novel-card">
+        <a href="${novel.url}">
+          <img src="${novel.img}">
+          <p class="title">${novel.title}</p>
+        </a>
+      </div>
+    `;
+  });
+}
 </script>
