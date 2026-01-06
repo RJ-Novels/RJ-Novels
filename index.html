@@ -3,159 +3,29 @@ layout: default
 title: Home
 permalink: /
 ---
+
 <div class="novel-grid">
-    <div class="novel-card"
-         data-category="light"
-         data-search-title="If I Become the Lifesaver of the Single Most Adorable Kouhai in the Academy, She Becomes a Commuting Wife and Comes Pressing for a Relationship | 学園一かわいい後輩の命の恩人になったら、通い妻になって関係を迫ってくる。"
-         data-link="the_lifesaver.html">
 
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/kGDrsrny/IMG-20260105-164740-818.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">If I Become the Lifesaver of the Single Most Adorable Kouhai in the Academy, She Becomes a Commuting Wife and Comes Pressing for a Relationship</p>
+{% for novel in site.novels %}
+
+  <div class="novel-card"
+       data-category="{{ novel.category }}"
+       data-search-title="{{ novel.title }} {{ novel.alt_title }}"
+       data-link="{{ novel.url | relative_url }}">
+
+    <div class="cover-container">
+      <img src="{{ novel.cover }}" alt="{{ novel.title }}">
+      <span class="tag">
+        {{ novel.category | capitalize }} Novel
+      </span>
     </div>
-    <div class="novel-card"
-         data-category="light"
-         data-search-title="The Cheeky Junior Gal Becomes Too Cute When She Gets Attached to Me | タメ口後輩ギャルが懐いたら、さすがに可愛すぎる | Tamekuchi koohai GAL ga natsuitara, sasuga ni kawaisugiru"
-         data-link="the_cheeky_junior_gal.html">
 
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/5t3VfChj/641288fd-3f3b-49ba-8aae-90668601bf3e_1759426705669.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">The Cheeky Junior Gal Becomes Too Cute When She Gets Attached to Me</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="The Secret Life Of An Honor Student | 優等生のウラのカオ　～実は裏アカ女子だった隣の席の美少女と放課後二人きり～ | Yūtōsei no Ura no Kao ~ jitsuwa ura aka joshidatta tonari no seki no bishōjo to hōkago futarikiri ~"
-         data-link="the_secret_life_of.html">
+    <p class="novel-title">
+      {{ novel.title }}
+    </p>
 
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/5tP4HgdD/b9ec7c89-edad-4c29-b03c-d4f4596fc48c.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">The Secret Life Of An Honor Student</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="こそっと恥じらう姿を俺だけに見せてくる学園のお姫さま | Kosotto Hajirau Sugata wo Ore dake ni Misete kuru Gakuen no Ohime-sama"
-         data-link="kosotto_hajirau_sugata_wo.html">
+  </div>
 
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/yxNM6Mt0/IMG_20260105_172300_198.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">Kosotto Hajirau Sugata wo Ore dake ni Misete kuru Gakuen no Ohime-sama</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="Tier1姉妹　有名四姉妹は僕なしでは生きられない | Tier 1 shimai yūmei yonshimai wa boku nashide wa iki rarenai | Tier 1 Sisters: The Four Famous Sisters Can’t Live Without Me"
-         data-link="tier_1_sisters.html">
+{% endfor %}
 
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/bNk7y9Fg/IMG_20260105_172713_330.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">Tier 1 Sisters: The Four Famous Sisters Can’t Live Without Me</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="Senchi kara Kaettekita Takashi-kun. Futsū ni kōkō Seikatsu o Okuritai | Takashi has returned from the war. He wants to have a normal high school life | 戦地から帰ってきたタカシ君。普通に高校生活を送りたい | 戦地から帰ってきたタカシ君。普通に高校生活送りたい | Senchi kara Kaette kita Takashi Kun. Futsuu ni Koukou Seikatsu Okuritai"
-         data-link="senchi_kara_kaette_kita_takashi.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/3R9QSPH0/35751406-1b0f-4524-96c9-d0a4b72d753e.png">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">Senchi kara Kaette kita Takashi Kun. Futsuu ni Koukou Seikatsu Okuritai</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="神の試練で最強になった凡人当主、災厄前の世界に帰還して無双する | The Ordinary Head of the Family Who Became the Strongest Through Divine Trials, Returning to the Pre-Calamity World to Dominate"
-         data-link="the_ordinary_head_of_the_family.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/02ps4TcW/b4add24d-f89f-4a81-b8c0-b9734acd0fa0.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">The Ordinary Head of the Family Who Became the Strongest Through Divine Trials, Returning to the Pre-Calamity World to Dominate</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="Furaku no Bishoujo Doukyuusei to no Rabukome ga Iijii Moodo Sugiru Ken | 不落の美少女同級生とのラブコメがイージーモード過ぎる件 | My Love Comedy with the Unfallable Beautiful Girl Classmate Is Way Too Easy"
-         data-link="my_love_comedy_with_the_unfallable_beauti.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/fL2hmPxw/18afbc41-7535-44a2-bda9-45c21835394e.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">My Love Comedy with the Unfallable Beautiful Girl Classmate Is Way Too Easy</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="10年ぶりに再会したクソガキは清純美少女JKに成長していた | When I met my brat again after 10 years, she had grown into a pure and beautiful high school girl | 10-Nen-buri ni Saikai Shita Kusogaki wa Seijun Bishōjo JK ni Seichō Shite Ita"
-         data-link="10_Nen_buri_ni_saikai_shita.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/jdrxJF7r/e16755a2-a7ad-47ce-8e24-51a0c1e61921.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">10-Nen-buri ni Saikai Shita Kusogaki wa Seijun Bishōjo JK ni Seichō Shite Ita</p>
-    </div>
-    <div class="novel-card"
-         data-category="light"
-         data-search-title="A Secret Relationship With The Tsundere Goddess That no One Can Know About | My Tsun Goddess and Our Secret Relationship | Tsun na Megami-sama to, Dare ni mo Ienai Himitsu no Kankei. | ツンな女神さまと、誰にも言えない秘密の関係。| Tsun’na Megami-sama to Darenimoienai Himitsu no Kankei"
-         data-link="tsun_na_megami_sama.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/mrR5hJ1P/IMG-20240830-WA0088.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">Tsun’na Megami-sama to Darenimoienai Himitsu no Kankei</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="Amamiya-san is the Cutest. And I’m Second | 世界で一番『可愛い』雨宮さん、二番目は俺 | Sekai de Ichiban “Kawaii” Amamiya-san, Nibanme wa Ore"
-         data-link="sekai_de_chiban_kawaii.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/nzhvHWX3/4ea6aaab-c3b7-40f3-a1e9-451eb27d34f5.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">Sekai de Ichiban “Kawaii” Amamiya-san, Nibanme wa Ore</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="無能と言われ続けた魔導師、実は世界最強なのに幽閉されていたので自覚なし | The Magician Who Was Constantly Called Incompetent Is Actually the Strongest in the World, but Was Imprisoned and Didn’t Realize It"
-         data-link="the_magician_who_was_wonstantly_called_incompetent.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/CLRZ0KzC/507ade1c-2eca-4994-ad35-1558fc165e82.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">The Magician Who Was Constantly Called Incompetent Is Actually the Strongest in the World, but Was Imprisoned and Didn’t Realize It</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="Words of Encounter Dedicated to That Summer あの夏に捧ぐ逢いことば Ano Natsu ni Sasagu ai Kotoba"
-         data-link="ano_natsu_ni_sasagu_ai.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/SNwNV2DB/IMG_20250828_192211_558.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">Ano Natsu ni Sasagu ai Kotoba</p>
-    </div>
-<div class="novel-card"
-         data-category="light"
-         data-search-title="A story about being entangled in a messy relationship with an older, attractive woman who smokes heavily and appears unhealthy重いタバコを吸ってる不健康そうな年上美人とドロドロの関係になっていた話Omoi Tabako o Sutteru Fukenkō-sōna Toshiue Bijin to Dorodoro no Kankei ni Natte Ita Hanashi"
-         data-link="omoi_tabako_o_sutteru.html">
-
-        <div class="cover-box">
-            <img src="https://i.postimg.cc/TYPHVph9/f22d94a4-1670-42bf-bf4d-f81bfa314dda.jpg">
-            <span class="tag light">Light Novel</span>
-        </div>
-        <p class="title">Omoi Tabako o Sutteru Fukenkō-sōna Toshiue Bijin to Dorodoro no Kankei ni Natte Ita Hanashi</p>
-   </div>
 </div>
