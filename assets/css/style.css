@@ -338,9 +338,15 @@ body {
 .save-btn.saved {
   color: #ff5b7f;
     }
-.novel-grid .novel-card a .title {
-    color: var(--text);  
-    text-decoration: none;
-    font-weight: normal;      
-    color: inherit;  
+/* TARGET LINKS INSIDE GRID CARDS */
+.novel-grid .novel-card a {
+    color: var(--text);        /* make text same as normal titles */
+    text-decoration: none !important; /* remove underline completely */
+    display: block;            /* ensure proper layout */
 }
+
+/* ALSO ENSURE CHILD TITLE DOESN’T ADD UNDERLINE */
+.novel-grid .novel-card a .title {
+    color: var(--text);
+    text-decoration: none !important;
+    }
