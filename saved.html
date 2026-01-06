@@ -46,3 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
                           </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Force all titles inside links in saved grid to have correct color
+  document.querySelectorAll("#savedGrid .novel-card a .title").forEach(title => {
+    title.style.color = "var(--text)";      
+    title.style.textDecoration = "none";    
+  });
+});
+</script>
