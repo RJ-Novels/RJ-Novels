@@ -64,3 +64,38 @@ if (scrollBtn) {
         });
     });
                 }
+/* SAVED POST */
+function getSaved() {
+  return JSON.parse(localStorage.getItem("savedNovels")) || [];
+}
+
+function toggleSave(novel) {
+  let saved = getSaved();
+  const exists = saved.find(n => n.id === novel.id);
+
+  if (exists) {
+    saved = saved.filter(n => n.id !== novel.id);
+  } else {
+    saved.push(novel);
+  }
+
+  localStorage.setItem("savedNovels", JSON.stringify(saved));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".save-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      e.preventDefault();
+
+      toggleSave({
+        id: btn.dataset.id,
+        title: btn.dataset.title,
+        url: btn.dataset.url,
+        img: btn.dataset.img
+      });
+
+      btn.classList.toggle("saved");
+    });
+  });
+});
