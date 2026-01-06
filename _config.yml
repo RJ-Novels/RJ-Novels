@@ -1,6 +1,11 @@
-title: My Custom Jekyll Website
-description: A site built from scratch using Jekyll, with custom structure.
-url: "https://rj-novels.github.io/" 
-permalink: pretty
+title: RJ Novels
+description: Light Novels & Web Novels PDF/EPUB
+url: "https://rj-novels.github.io"
+baseurl: "/RJ-Novels"
+
+permalink: /:title/
+
+markdown: kramdown
+
 liquid:
-  error_mode: strict
+  error_mode: warn
