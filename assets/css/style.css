@@ -339,7 +339,7 @@ body {
   color: #ff5b7f;
     }
 .novel-grid .novel-card a .title {
-    color: var(--text);           /* match main text color */
-    text-decoration: none;        /* remove underline */
-    font-weight: normal;          /* optional: match index */
+    color: var(--text);  
+    text-decoration: none !important;
+    font-weight: normal;          
 }
