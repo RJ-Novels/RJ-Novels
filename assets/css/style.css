@@ -340,6 +340,7 @@ body {
     }
 .novel-grid .novel-card a .title {
     color: var(--text);  
-    text-decoration: none !important;
-    font-weight: normal;          
+    text-decoration: none;
+    font-weight: normal;      
+    color: inherit;  
 }
