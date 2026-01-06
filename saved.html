@@ -3,25 +3,42 @@ layout: default
 title: Saved Novels
 permalink: /saved/
 ---
-<h2>Saved Novels</h2>
-<div id="savedGrid" class="novel-grid"></div>
+<div class="novel-grid" id="savedGrid"></div>
 
 <script>
-const grid = document.getElementById("savedGrid");
-const saved = JSON.parse(localStorage.getItem("savedNovels")) || [];
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.getElementById("savedGrid");
+  const saved = JSON.parse(localStorage.getItem("savedNovels")) || [];
 
-if (saved.length === 0) {
-  grid.innerHTML = "<p>No saved novels yet.</p>";
-} else {
+  if (saved.length === 0) {
+    grid.innerHTML = "<p style='padding:20px'>No saved novels yet.</p>";
+    return;
+  }
+
   saved.forEach(novel => {
     grid.innerHTML += `
-      <div class="novel-card">
+      <div class="novel-card" data-link="${novel.url}">
+
+        <!-- SAVE BUTTON (same as index) -->
+        <button class="save-btn saved"
+          data-id="${novel.id}"
+          data-title="${novel.title}"
+          data-url="${novel.url}"
+          data-img="${novel.img}">
+          <i class="fa-solid fa-bookmark"></i>
+        </button>
+
         <a href="${novel.url}">
-          <img src="${novel.img}">
+          <div class="cover-box">
+            <img src="${novel.img}" alt="${novel.title}">
+            <span class="tag light">Saved</span>
+          </div>
+
           <p class="title">${novel.title}</p>
         </a>
+
       </div>
     `;
   });
-}
-</script>
+});
+                      </script>
