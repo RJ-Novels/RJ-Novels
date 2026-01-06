@@ -9,3 +9,7 @@ markdown: kramdown
 
 liquid:
   error_mode: warn
+  collections:
+  novels:
+    output: true
+    permalink: /:name/
