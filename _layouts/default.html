@@ -26,6 +26,7 @@
     <h1>RJ Novels</h1>
 </header>
 
+{% if page.url == "/" %}
 <div class="search-box">
     <input type="text" id="searchInput" placeholder="Search novels...">
 </div>
@@ -35,6 +36,7 @@
     <button class="cat-btn" data-category="light">Light Novels</button>
     <button class="cat-btn" data-category="web">Web Novels</button>
 </div>
+{% endif %}
 
 <main>
     {{ content }}
