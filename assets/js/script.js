@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".save-btn").forEach(btn => {
     const id = btn.dataset.id;
 
-    /* restore saved state on load */
+    /* restore saved state */
     if (saved.some(novel => novel.id === id)) {
       btn.classList.add("saved");
     }
@@ -95,16 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const index = savedNow.findIndex(novel => novel.id === id);
 
       if (index !== -1) {
-        /* UNSAVE */
         savedNow.splice(index, 1);
         btn.classList.remove("saved");
       } else {
-        /* SAVE */
         savedNow.push({
           id: btn.dataset.id,
           title: btn.dataset.title,
           url: btn.dataset.url,
-          img: btn.dataset.img
+          img: btn.dataset.img,
+          category: btn.dataset.category   // 🔥 TAGS
         });
         btn.classList.add("saved");
       }
