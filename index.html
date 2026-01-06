@@ -31,20 +31,29 @@ permalink: /
 {% endfor %}
 
 </div>
-<div class="post-card">
-  
+<div class="novel-card"
+     data-category="{{ novel.category }}"
+     data-search-title="{{ novel.title }} {{ novel.alt_title }}"
+     data-link="{{ novel.url | relative_url }}">
+
   <!-- SAVE BUTTON -->
   <button class="save-btn"
-    data-id="{{ post.id }}"
-    data-title="{{ post.title }}"
-    data-url="{{ post.url }}"
-    data-img="{{ post.cover }}">
-    💾
+    data-id="{{ novel.url }}"
+    data-title="{{ novel.title }}"
+    data-url="{{ novel.url | relative_url }}"
+    data-img="{{ novel.cover }}">
+    <i class="fa-solid fa-bookmark"></i>
   </button>
 
-  <a href="{{ post.url }}">
-    <img src="{{ post.cover }}">
-    <h3>{{ post.title }}</h3>
+  <a href="{{ novel.url | relative_url }}">
+    <div class="cover-box">
+      <img src="{{ novel.cover }}" alt="{{ novel.title }}">
+      <span class="tag {{ novel.category }}">
+        {{ novel.category | capitalize }} Novel
+      </span>
+    </div>
+
+    <p class="title">{{ novel.title }}</p>
   </a>
 
 </div>
