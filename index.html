@@ -31,6 +31,23 @@ permalink: /
 {% endfor %}
 
 </div>
+<div class="post-card">
+  
+  <!-- SAVE BUTTON -->
+  <button class="save-btn"
+    data-id="{{ post.id }}"
+    data-title="{{ post.title }}"
+    data-url="{{ post.url }}"
+    data-img="{{ post.cover }}">
+    💾
+  </button>
+
+  <a href="{{ post.url }}">
+    <img src="{{ post.cover }}">
+    <h3>{{ post.title }}</h3>
+  </a>
+
+</div>
 <button id="scrollTopBtn" title="Go to top">
   <i class="fa-solid fa-arrow-up"></i>
 </button>
