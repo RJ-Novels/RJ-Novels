@@ -1,0 +1,6 @@
+title: My Custom Jekyll Website
+description: A site built from scratch using Jekyll, with custom structure.
+url: "https://rj-novels.github.io/" 
+permalink: pretty
+liquid:
+  error_mode: strict
