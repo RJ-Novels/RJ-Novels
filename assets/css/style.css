@@ -262,3 +262,34 @@ body {
         transform: scale(0.95);
     }
     }
+/* ===== IMAGE QUALITY & COLOR BOOST ===== */
+.cover-box img,
+.cover-wrapper img {
+    image-rendering: auto;
+    filter:
+        contrast(1.08)
+        saturate(1.15)
+        brightness(1.03);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Subtle zoom + glow on hover (homepage only) */
+.novel-card:hover .cover-box img {
+    transform: scale(1.03);
+    filter:
+        contrast(1.12)
+        saturate(1.25)
+        brightness(1.06);
+}
+/* Dark cinematic tone */
+.cover-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.05),
+        rgba(0,0,0,0.25)
+    );
+    pointer-events: none;
+}
