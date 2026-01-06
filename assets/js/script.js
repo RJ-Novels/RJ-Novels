@@ -45,3 +45,22 @@ cards.forEach(card => {
         window.location.href = card.dataset.link;
     });
 });
+/* SCROLL TO TOP (INDEX PAGE ONLY) */
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+if (scrollBtn) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+                }
