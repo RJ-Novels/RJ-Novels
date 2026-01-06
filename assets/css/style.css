@@ -323,18 +323,18 @@ body {
 
 .save-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   background: rgba(0,0,0,0.7);
   border: none;
   color: white;
-  font-size: 16px;
-  padding: 6px 8px;
+  padding: 6px;
   border-radius: 50%;
+  font-size: 14px;
   cursor: pointer;
-  z-index: 5;
+  z-index: 10;
 }
 
 .save-btn.saved {
-  color: #ff4d6d;
-}
+  color: #ff5b7f;
+    }
