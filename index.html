@@ -16,11 +16,12 @@ permalink: /
        data-link="{{ novel.url | relative_url }}">
         <!-- SAVE BUTTON -->
   <button class="save-btn"
-    data-id="{{ novel.url }}"
-    data-title="{{ novel.title }}"
-    data-url="{{ novel.url | relative_url }}"
-    data-img="{{ novel.cover }}">
-    <i class="fa-solid fa-bookmark"></i>
+  data-id="{{ novel.url }}"
+  data-title="{{ novel.title }}"
+  data-url="{{ novel.url | relative_url }}"
+  data-img="{{ novel.cover }}"
+  data-category="{{ novel.category }}">
+  <i class="fa-solid fa-bookmark"></i>
   </button>
     <div class="cover-box">
       <img src="{{ novel.cover }}" alt="{{ novel.title }}">
