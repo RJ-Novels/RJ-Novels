@@ -6,7 +6,7 @@ permalink: /
 
 <div class="novel-grid">
 
-{% assign sorted = site.novels | sort: "last_modified_at" | reverse %}
+{% assign sorted = site.novels | sort: "order" | reverse %}
 
 {% for novel in sorted %}
 
