@@ -6,7 +6,9 @@ permalink: /
 
 <div class="novel-grid">
 
-{% for novel in site.novels %}
+{% assign sorted = site.novels | sort: "last_modified_at" | reverse %}
+
+{% for novel in sorted %}
 
   <div class="novel-card"
        data-category="{{ novel.category }}"
