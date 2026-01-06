@@ -13,14 +13,14 @@ permalink: /
        data-search-title="{{ novel.title }} {{ novel.alt_title }}"
        data-link="{{ novel.url | relative_url }}">
 
-    <div class="cover-container">
+    <div class="cover-box">
       <img src="{{ novel.cover }}" alt="{{ novel.title }}">
-      <span class="tag">
+      <span class="tag {{ novel.category }}">
         {{ novel.category | capitalize }} Novel
       </span>
     </div>
 
-    <p class="novel-title">
+    <p class="title">
       {{ novel.title }}
     </p>
 
