@@ -67,5 +67,36 @@
 {% endif %}
 </main>
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+    <script>
+function getSaved() {
+  return JSON.parse(localStorage.getItem("savedPosts")) || [];
+}
+
+function toggleSave(post) {
+  let saved = getSaved();
+  const exists = saved.find(p => p.id === post.id);
+
+  if (exists) {
+    saved = saved.filter(p => p.id !== post.id);
+  } else {
+    saved.push(post);
+  }
+
+  localStorage.setItem("savedPosts", JSON.stringify(saved));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".save-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      toggleSave({
+        id: btn.dataset.id,
+        title: btn.dataset.title,
+        url: btn.dataset.url,
+        img: btn.dataset.img
+      });
+    });
+  });
+});
+    </script>
 </body>
 </html>
