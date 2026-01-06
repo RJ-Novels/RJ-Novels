@@ -17,28 +17,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   saved.forEach(novel => {
     grid.innerHTML += `
-      <div class="novel-card" data-link="${novel.url}">
+      <div class="novel-card"
+        data-category="${novel.category}"
+        data-search-title="${novel.title}">
 
-        <!-- SAVE BUTTON (same as index) -->
+        <!-- SAVE BUTTON -->
         <button class="save-btn saved"
           data-id="${novel.id}"
           data-title="${novel.title}"
           data-url="${novel.url}"
-          data-img="${novel.img}">
+          data-img="${novel.img}"
+          data-category="${novel.category}">
           <i class="fa-solid fa-bookmark"></i>
         </button>
 
         <a href="${novel.url}">
           <div class="cover-box">
             <img src="${novel.img}" alt="${novel.title}">
-            <span class="tag light">Saved</span>
+            <span class="tag ${novel.category}">
+              ${novel.category.charAt(0).toUpperCase() + novel.category.slice(1)} Novel
+            </span>
           </div>
 
           <p class="title">${novel.title}</p>
         </a>
-
       </div>
     `;
   });
 });
-                      </script>
+                          </script>
