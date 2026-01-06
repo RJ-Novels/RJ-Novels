@@ -15,3 +15,5 @@ collections:
   novels:
     output: true
     permalink: /:name/
+plugins:
+  - jekyll-last-modified-at
