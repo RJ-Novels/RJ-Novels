@@ -267,9 +267,9 @@ body {
 .cover-wrapper img {
     image-rendering: auto;
     filter:
-        contrast(1.08)
-        saturate(1.15)
-        brightness(1.03);
+        contrast(1)
+        saturate(1.35)
+        brightness(0.95);
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -277,9 +277,9 @@ body {
 .novel-card:hover .cover-box img {
     transform: scale(1.03);
     filter:
-        contrast(1.12)
-        saturate(1.25)
-        brightness(1.06);
+        contrast(1)
+        saturate(1.35)
+        brightness(0.95);
 }
 /* Dark cinematic tone */
 .cover-box::after {
