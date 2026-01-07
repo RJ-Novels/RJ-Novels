@@ -3,10 +3,7 @@ layout: default
 title: Saved Novels
 permalink: /saved/
 ---
-<div class="novel-grid" id="savedGrid">
-  {% assign sorted = site.novels | sort: "order" | reverse %}
-{% for novel in sorted %}
-</div>
+<div class="novel-grid" id="savedGrid"></div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
