@@ -29,6 +29,9 @@ permalink: /
         {{ novel.category | capitalize }} Novel
       </span>
     </div>
+    <div class="time-badge"
+     data-date="{{ novel.date | date: '%Y-%m-%d' }}">
+    </div>
     <p class="title">
       {{ novel.title }}
     </p>
