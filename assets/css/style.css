@@ -334,28 +334,29 @@ body {
 
 .time-badge {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 8px;
+  right: 8px;
 
-  width: 48px;
-  height: 28px;
+  width: 38px;
+  height: 26px;
 
-  background: #d62828;
+  background: #000;
   color: #fff;
 
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 
-  /* FLIPPED SHAPE */
+  transform: rotate(180deg);
+
   clip-path: polygon(
     0 0,
-    90% 0,
+    85% 0,
     100% 50%,
-    90% 100%,
+    85% 100%,
     0 100%
   );
 }
@@ -385,7 +386,7 @@ body {
   background: var(--red);
 }
 .time-badge.hot::after {
-  content: "HOT";
+  content: " HOT";
 }
 
 /* NEW */
@@ -395,5 +396,5 @@ body {
   color: #000;
 }
 .time-badge.new::after {
-  content: "NEW";
+  content: " NEW";
     }
