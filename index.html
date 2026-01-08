@@ -24,13 +24,17 @@ permalink: /
   <i class="fa-solid fa-bookmark"></i>
   </button>
     <div class="cover-box">
-      <img src="{{ novel.cover }}" alt="{{ novel.title }}">
-      <span class="tag {{ novel.category }}">
-        {{ novel.category | capitalize }} Novel
-      </span>
-    </div>
-    <div class="time-badge"
-     data-date="{{ novel.date | date: '%Y-%m-%d' }}">
+  <img src="{{ novel.cover }}" alt="{{ novel.title }}">
+
+  <span class="tag {{ novel.category }}">
+    {{ novel.category | capitalize }} Novel
+  </span>
+
+  {% if novel.badge == "auto" %}
+  <div class="time-badge"
+       data-date="{{ novel.date | date: '%Y-%m-%d' }}">
+  </div>
+  {% endif %}
     </div>
     <p class="title">
       {{ novel.title }}
