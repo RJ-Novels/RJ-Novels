@@ -112,3 +112,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+/*hot badge*/
+document.querySelectorAll(".time-badge").forEach(badge => {
+  const postDate = new Date(badge.dataset.date);
+  const now = new Date();
+
+  const days = Math.floor(
+    (now - postDate) / (1000 * 60 * 60 * 24)
+  );
+
+  if (days <= 5) {
+    badge.classList.add("hot");
+  } else if (days <= 15) {
+    badge.classList.add("new");
+  } else {
+    badge.remove();
+  }
+});
