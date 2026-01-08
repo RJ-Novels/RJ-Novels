@@ -342,3 +342,46 @@ body {
 .save-btn.saved {
   color: #ff5b7f;
     }
+.cover-box {
+  position: relative;
+}
+
+.tag-row {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.tag {
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Category tags */
+.tag.light {
+  background: #6c63ff;
+  color: #fff;
+}
+
+.tag.web {
+  background: #00b894;
+  color: #fff;
+}
+
+/* NEW */
+.tag.new {
+  background: #ff4757;
+  color: #fff;
+}
+
+/* HOT (if you add later) */
+.tag.hot {
+  background: linear-gradient(45deg, #ff9f1a, #ff3838);
+  color: #fff;
+    }
