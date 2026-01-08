@@ -285,18 +285,7 @@ body {
         saturate(1.35)
         brightness(0.95);
 }
-/* Dark cinematic tone */
-.cover-box::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.05),
-        rgba(0,0,0,0.25)
-    );
-    pointer-events: none;
-}
+
 /* SCROLL TO TOP BUTTON (INDEX ONLY) */
 #scrollTopBtn {
     position: fixed;
