@@ -386,7 +386,7 @@ body {
   background: var(--red);
 }
 .time-badge.hot::after {
-  content: "\2009HOT";
+  content: "\2003\2009HOT";
 }
 
 /* NEW */
