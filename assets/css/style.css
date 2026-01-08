@@ -386,7 +386,7 @@ body {
   background: var(--red);
 }
 .time-badge.hot::after {
-  content: "&nbap;HOT";
+  content: "ㅤHOT";
 }
 
 /* NEW */
@@ -396,5 +396,5 @@ body {
   color: #000;
 }
 .time-badge.new::after {
-  content: "&nbsp;NEW";
+  content: "ㅤNEW";
     }
