@@ -347,15 +347,6 @@ body {
   position: relative;
 }
 
-.top-tags {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  display: flex;
-  gap: 6px; /* space between NEW and category */
-  z-index: 10;
-}
-
 .tag.new {
   background: #ff2d55;
   color: #fff;
@@ -364,11 +355,6 @@ body {
   padding: 3px 6px;
   border-radius: 4px;
 }
-
-.tag.light, 
-.tag.web {
-  background: #007bff; /* adjust per category */
-    }
 
 /* HOT */
 .tag.hot {
