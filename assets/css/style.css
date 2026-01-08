@@ -391,7 +391,7 @@ body {
 /* HOT */
 .time-badge.hot {
   display: flex;
-  background: #e63946;
+  background: var(--red);
 }
 .time-badge.hot::after {
   content: "HOT";
