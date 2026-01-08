@@ -337,7 +337,7 @@ body {
   bottom: 8px;
   right: 15px;
 
-  width: 38px;
+  width: 40px;
   height: 26px;
 
   background: #000;
@@ -396,5 +396,5 @@ body {
   color: #000;
 }
 .time-badge.new::after {
-  content: "\00a0\00a0NEW";
+  content: "\2003\20090NEW";
     }
