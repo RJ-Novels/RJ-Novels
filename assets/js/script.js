@@ -114,7 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 /*hot badge*/
 document.querySelectorAll(".time-badge").forEach(badge => {
-  const postDate = new Date(badge.dataset.date);
+  const dateStr = badge.dataset.date;
+  if (!dateStr) return;
+
+  const postDate = new Date(dateStr);
   const now = new Date();
 
   const days = Math.floor(
