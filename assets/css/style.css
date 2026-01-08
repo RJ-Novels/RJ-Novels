@@ -366,8 +366,11 @@ body {
   content: "";
   position: absolute;
   right: 6px;
-  width: 5px;
-  height: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 6px;
+  height: 6px;
   background: #fff;
   border-radius: 50%;
 }
