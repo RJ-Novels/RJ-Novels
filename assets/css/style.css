@@ -334,30 +334,29 @@ body {
 
 .time-badge {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
+  bottom: 10px;
+  right: 10px;
 
-  width: 38px;
-  height: 26px;
+  width: 48px;
+  height: 28px;
 
-  background: #000;
+  background: #d62828;
   color: #fff;
 
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
 
-  display: none;
+  display: flex;
   align-items: center;
-  justify-content: center;
-
-  transform: rotate(180deg);
+  justify-content: flex-end;
+  padding-right: 10px;
 
   clip-path: polygon(
-    0 0,
-    90% 0,
-    100% 50%,
-    90% 100%,
-    0 100%
+    10% 0,
+    100% 0,
+    100% 100%,
+    10% 100%,
+    0 50%
   );
  }
 
