@@ -15,12 +15,3 @@ collections:
   novels:
     output: true
     permalink: /:name/
-
-collections:
-  novels:
-    output: true
-
-feed:
-  collections:
-    novels:
-      path: /novels.xml
