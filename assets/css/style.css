@@ -342,3 +342,66 @@ body {
 .save-btn.saved {
   color: #ff5b7f;
     }
+
+.time-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  width: 48px;
+  height: 36px;
+
+  background: #000;
+  border-radius: 6px 10px 10px 6px;
+
+  clip-path: polygon(
+    0 0,
+    85% 0,
+    100% 50%,
+    85% 100%,
+    0 100%
+  );
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* hole */
+.time-badge::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* text */
+.time-badge::after {
+  content: "";
+}
+
+/* HOT */
+.time-badge.hot {
+  display: flex;
+  background: #e63946;
+}
+.time-badge.hot::after {
+  content: "HOT";
+}
+
+/* NEW */
+.time-badge.new {
+  display: flex;
+  background: #ffb703;
+  color: #000;
+}
+.time-badge.new::after {
+  content: "NEW";
+        }
