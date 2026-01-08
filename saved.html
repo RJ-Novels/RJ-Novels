@@ -37,11 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="tag ${novel.category}">
               ${novel.category.charAt(0).toUpperCase() + novel.category.slice(1)} Novel
             </span>
-            {% if novel.badge == "auto" %}
-  <div class="time-badge"
-       data-date="{{ novel.date | date: '%Y-%m-%d' }}">
-  </div>
-  {% endif %}
           </div>
 
           <p class="title">${novel.title}</p>
