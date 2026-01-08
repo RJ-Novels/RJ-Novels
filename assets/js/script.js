@@ -125,9 +125,9 @@ document.querySelectorAll(".time-badge").forEach(badge => {
   );
 
   if (days <= 5) {
-    badge.classList.add("hot");
+    badge.classList.add("&nbsp;hot");
   } else if (days <= 15) {
-    badge.classList.add("new");
+    badge.classList.add("&nbsp;new");
   } else {
     badge.remove();
   }
