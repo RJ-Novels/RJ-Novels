@@ -344,18 +344,27 @@ body {
     }
 
 /* NEW tag */
+.cover-box {
+  position: relative; /* needed for absolute/flex inside */
+}
+
+.top-tags {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 4px; /* space between category and NEW */
+  padding: 0; /* optional */
+}
+
 .tag.new {
-  position: absolute;     
-  top: auto;               
-  right: 10px;             
-  background: #ff2d55;    
-  color: #fff;            
-  font-weight: bold;
-  font-size: 12px;
+  background: #ff2d55; /* NEW badge color */
+  color: #fff;
+  font-weight: 700;
+  font-size: 10px;
   padding: 3px 6px;
-  border-radius: 4px;
-  z-index: 10;            
-             }
+  border-radius: 0 4px 4px 0; /* optional: rounded only on right */
+    }
 /* HOT */
 .tag.hot {
   background: linear-gradient(45deg, #ff9f1a, #ff3838);
