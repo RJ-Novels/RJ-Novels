@@ -124,9 +124,9 @@ document.querySelectorAll(".time-badge").forEach(badge => {
     (now - postDate) / (1000 * 60 * 60 * 24)
   );
 
-  if (days <= 5) {
+  if (days <= 3) {
     badge.classList.add("hot");
-  } else if (days <= 15) {
+  } else if (days <= 7) {
     badge.classList.add("new");
   } else {
     badge.remove();
