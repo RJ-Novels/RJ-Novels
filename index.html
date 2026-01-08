@@ -28,6 +28,7 @@ permalink: /
       <span class="tag {{ novel.category }}">
         {{ novel.category | capitalize }} Novel
       </span>
+      {% if novel.date %}
       {% assign now = site.time | date: "%s" %}
 {% assign post_time = novel.date | date: "%s" %}
 {% assign diff = now | minus: post_time | divided_by: 86400 %}
