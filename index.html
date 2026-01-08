@@ -25,6 +25,13 @@ permalink: /
   </button>
     <div class="cover-box">
       <img src="{{ novel.cover }}" alt="{{ novel.title }}">
+      {% assign now = site.time | date: "%s" %}
+{% assign post_time = novel.date | date: "%s" %}
+{% assign diff = now | minus: post_time | divided_by: 86400 %}
+
+{% if diff <= 7 %}
+  <span class="tag new">NEW</span>
+{% endif %}
       <span class="tag {{ novel.category }}">
         {{ novel.category | capitalize }} Novel
       </span>
