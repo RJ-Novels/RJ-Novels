@@ -15,3 +15,11 @@ collections:
   novels:
     output: true
     permalink: /:name/
+    
+plugins:
+  - jekyll-feed
+
+feed:
+  collections:
+    novels:
+      path: /novels.xml
