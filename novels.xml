@@ -3,42 +3,42 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
->
+     xmlns:atom="http://www.w3.org/2005/Atom">
 
 <channel>
   <title>RJ Novels</title>
-  <atom:link href="{{ site.url }}{{ site.baseurl }}/novels.xml" rel="self" type="application/rss+xml" />
   <link>{{ site.url }}{{ site.baseurl }}/</link>
   <description>Latest novel updates from RJ Novels</description>
-  <language>en-US</language>
-  <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-  <sy:updatePeriod>hourly</sy:updatePeriod>
-  <sy:updateFrequency>1</sy:updateFrequency>
-  <generator>Jekyll</generator>
 
-  {% for novel in site.novels %}
-  {% if novel.date %}
+  <atom:link
+    href="{{ site.url }}{{ site.baseurl }}/novels.xml"
+    rel="self"
+    type="application/rss+xml" />
+
+  {% assign novels = site.novels | sort: "date" | reverse %}
+  {% for novel in novels %}
+
   <item>
     <title>{{ novel.title | xml_escape }}</title>
-    <link>{{ novel.url | absolute_url }}</link>
-    <guid isPermaLink="true">{{ novel.url | absolute_url }}</guid>
-    <pubDate>{{ novel.date | date_to_rfc822 }}</pubDate>
-    <dc:creator><![CDATA[RJ Novels]]></dc:creator>
+
+    <link>{{ site.url }}{{ site.baseurl }}{{ novel.url }}</link>
+
+    <guid isPermaLink="true">
+      {{ site.url }}{{ site.baseurl }}{{ novel.url }}
+    </guid>
+
+    <pubDate>
+      {{ novel.date | date: "%a, %d %b %Y %H:%M:%S %z" }}
+    </pubDate>
 
     <description><![CDATA[
-      {{ novel.description | default: novel.excerpt | strip_html }}
+      {% if novel.cover %}
+      <img src="{{ novel.cover }}" /><br>
+      {% endif %}
+      {{ novel.description | default: novel.excerpt }}
     ]]></description>
-
-    <content:encoded><![CDATA[
-      {{ novel.description | default: novel.excerpt | strip_html }}
-    ]]></content:encoded>
   </item>
-  {% endif %}
+
   {% endfor %}
 
 </channel>
