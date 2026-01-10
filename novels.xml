@@ -5,21 +5,17 @@ layout: null
 <rss version="2.0">
   <channel>
     <title>RJ Novels</title>
-    <link>{{ site.url }}{{ site.baseurl }}</link>
-    <description>Latest novels from RJ Novels</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <description>Latest novel updates from RJ Novels</description>
+    <language>en-us</language>
 
     {% for novel in site.novels %}
     <item>
-      <title><![CDATA[{{ novel.title }}]]></title>
+      <title>{{ novel.title | xml_escape }}</title>
       <link>{{ novel.url | absolute_url }}</link>
-      <guid>{{ novel.url | absolute_url }}</guid>
+      <guid isPermaLink="true">{{ novel.url | absolute_url }}</guid>
       <pubDate>{{ novel.date | date_to_rfc822 }}</pubDate>
-      <description><![CDATA[
-        {% if novel.cover %}
-        <img src="{{ novel.cover }}" />
-        {% endif %}
-        <p>{{ novel.description | default: novel.excerpt }}</p>
-      ]]></description>
+      <description>{{ novel.description | default: novel.excerpt | strip_html | xml_escape }}</description>
     </item>
     {% endfor %}
 
