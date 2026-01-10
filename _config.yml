@@ -18,6 +18,7 @@ collections:
     
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
     
 feed:
   collections:
