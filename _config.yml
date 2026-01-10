@@ -16,3 +16,7 @@ collections:
     output: true
     permalink: /:name/
     
+feed:
+  collections:
+    novels:
+      path: /novels.xml
