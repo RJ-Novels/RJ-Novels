@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>RJ Novels</title>
+  <link>{{ site.url }}{{ site.baseurl }}</link>
+  <description>Latest novels</description>
+
+  {% for novel in site.novels %}
+  <item>
+    <title>{{ novel.title }}</title>
+    <link>{{ novel.url | absolute_url }}</link>
+    <guid>{{ novel.url | absolute_url }}</guid>
+    <pubDate>{{ novel.date | default: site.time | date_to_rfc822 }}</pubDate>
+    <description><![CDATA[
+      <img src="{{ novel.cover }}">
+    ]]></description>
+  </item>
+  {% endfor %}
+
+</channel>
+</rss>
