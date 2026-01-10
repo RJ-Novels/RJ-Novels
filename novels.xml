@@ -10,12 +10,15 @@ layout: default
 
   {% for novel in site.novels %}
   <item>
-    <title>{{ novel.title }}</title>
+    <title><![CDATA[{{ novel.title }}]]></title>
     <link>{{ novel.url | absolute_url }}</link>
     <guid>{{ novel.url | absolute_url }}</guid>
-    <pubDate>{{ novel.date | default: site.time | date_to_rfc822 }}</pubDate>
+    <pubDate>
+      {{ novel.date | default: site.time | date_to_rfc822 }}
+    </pubDate>
     <description><![CDATA[
-      <img src="{{ novel.cover }}">
+      <img src="{{ novel.cover }}" /><br/>
+      {{ novel.excerpt | default: novel.title }}
     ]]></description>
   </item>
   {% endfor %}
