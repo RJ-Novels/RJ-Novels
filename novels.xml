@@ -1,27 +1,27 @@
 ---
-layout: default
+layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
-<channel>
-  <title>RJ Novels</title>
-  <link>{{ site.url }}{{ site.baseurl }}</link>
-  <description>Latest novels</description>
+  <channel>
+    <title>RJ Novels</title>
+    <link>{{ site.url }}{{ site.baseurl }}</link>
+    <description>Latest novels from RJ Novels</description>
 
-  {% for novel in site.novels %}
-  <item>
-    <title><![CDATA[{{ novel.title }}]]></title>
-    <link>{{ novel.url | absolute_url }}</link>
-    <guid>{{ novel.url | absolute_url }}</guid>
-    <pubDate>
-      {{ novel.date | default: site.time | date_to_rfc822 }}
-    </pubDate>
-    <description><![CDATA[
-      <img src="{{ novel.cover }}" /><br/>
-      {{ novel.excerpt | default: novel.title }}
-    ]]></description>
-  </item>
-  {% endfor %}
+    {% for novel in site.novels %}
+    <item>
+      <title><![CDATA[{{ novel.title }}]]></title>
+      <link>{{ novel.url | absolute_url }}</link>
+      <guid>{{ novel.url | absolute_url }}</guid>
+      <pubDate>{{ novel.date | date_to_rfc822 }}</pubDate>
+      <description><![CDATA[
+        {% if novel.cover %}
+        <img src="{{ novel.cover }}" />
+        {% endif %}
+        <p>{{ novel.description | default: novel.excerpt }}</p>
+      ]]></description>
+    </item>
+    {% endfor %}
 
-</channel>
+  </channel>
 </rss>
