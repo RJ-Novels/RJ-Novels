@@ -16,6 +16,9 @@ collections:
     output: true
     permalink: /:name/
     
+plugins:
+  - jekyll-feed
+    
 feed:
   collections:
     novels:
