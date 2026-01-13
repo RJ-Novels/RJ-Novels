@@ -80,24 +80,7 @@
   <div class="comment-content-box">
       <div id="disqus_thread"></div>
 <div class="comments">
-<script>
-      var disqus_config = function () {
-        this.page.url = "{{ page.url | absolute_url }}";
-        this.page.identifier = "{{ page.url }}";
-      };
 
-      (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://rj-novels.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-
-    <noscript>
-      Please enable JavaScript to view the comments.
-    </noscript>
-    </div>
 {% endif %}
 </main>
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
