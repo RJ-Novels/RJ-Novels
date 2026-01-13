@@ -405,3 +405,16 @@ body {
 .giscus a[href*="github.com"] {
   display: none !important;
     }
+/* Hide comment count text */
+.giscus .giscus-comments-count,
+.giscus .giscus-comment-count,
+.giscus [class*="count"],
+.giscus summary {
+  display: none !important;
+    }
+/* Hide metadata and headers */
+.giscus-header,
+.giscus-footer,
+.giscus-summary,
+  display: none !important;
+    }
