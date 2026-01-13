@@ -405,16 +405,6 @@ body {
 .giscus a[href*="github.com"] {
   display: none !important;
     }
-/* Hide comment count text */
-.giscus .giscus-comments-count,
-.giscus .giscus-comment-count,
-.giscus [class*="count"],
-.giscus summary {
-  display: none !important;
-    }
-/* Hide metadata and headers */
-.giscus-header,
-.giscus-footer,
-.giscus-summary,
-  display: none !important;
-    }
+.giscus-comments iframe {
+    --giscus-hide-category: 1; /* hide category badge inside iframe */
+      }
