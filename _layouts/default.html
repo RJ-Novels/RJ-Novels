@@ -78,8 +78,25 @@
     {% if page.collection == "novels" %}
 <div class="comment-wrapper-force">
   <div class="comment-content-box">
-    <div id="disqus_thread"></div>
 <div class="comments">
+<div class="giscus-comments">
+<script src="https://giscus.app/client.js"
+        data-repo="rj-novels/RJ-Novels"
+        data-repo-id="R_kgDOQ0CVFg"
+        data-category="Comments"
+        data-category-id="DIC_kwDOQ0CVFs4C04xZ"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+{% endif %}
 {% endif %}
 </main>
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
