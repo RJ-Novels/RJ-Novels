@@ -1,86 +1,58 @@
-// Initialize Firebase
+alert("comments.js loaded");
+
 firebase.initializeApp({
   apiKey: "AIzaSyBeqw9avQxBNGtp_32_iUYR6cCnRiiBAkg",
   authDomain: "rj-comments.firebaseapp.com",
-  projectId: "rj-comments",
-  storageBucket: "rj-comments.firebasestorage.app",
-  messagingSenderId: "726533414006",
-  appId: "1:726533414006:web:602418b61f785728cb5357"
+  projectId: "rj-comments"
 });
 
+alert("Firebase initialized");
+
 const db = firebase.firestore();
+alert("Firestore ready");
 
-// Unique page ID (separate comments per page)
 const pageId = window.location.pathname;
+alert("Page ID: " + pageId);
 
-// Elements
 const list = document.getElementById("comments-list");
 const postBtn = document.getElementById("postComment");
-if (!postBtn) return;
 
-// Load comments (LIVE)
+if (!list || !postBtn) {
+  alert("❌ HTML elements missing");
+}
+
 db.collection("comments")
   .where("page", "==", pageId)
   .orderBy("time", "asc")
-  .onSnapshot(snapshot => {
-    list.innerHTML = "";
+  .onSnapshot(
+    snapshot => {
+      alert("Snapshot loaded");
+      list.innerHTML = "";
 
-    if (snapshot.empty) {
-      list.innerHTML = `<p class="no-comments">No comments yet.</p>`;
-      return;
+      snapshot.forEach(doc => {
+        const c = doc.data();
+        list.innerHTML += `<p>${c.name}: ${c.text}</p>`;
+      });
+    },
+    err => {
+      alert("🔥 Firestore error: " + err.message);
     }
+  );
 
-    snapshot.forEach(doc => {
-      const c = doc.data();
-      list.innerHTML += `
-        <div class="comment">
-          <div class="comment-head">
-            <strong>${escapeHTML(c.name)}</strong>
-            <span>${new Date(c.time).toLocaleString()}</span>
-          </div>
-          <div class="comment-body">${escapeHTML(c.text)}</div>
-        </div>
-      `;
-    });
-  });
+postBtn.onclick = () => {
+  alert("Post button clicked");
 
-// Post comment
-postBtn.addEventListener("click", () => {
-  const name = document.getElementById("name").value.trim();
-  const text = document.getElementById("comment").value.trim();
-
-  if (!name || !text) {
-    alert("Name and comment required");
-    return;
-  }
-
-  postBtn.disabled = true;
-  postBtn.innerText = "Posting...";
+  const name = document.getElementById("name").value;
+  const text = document.getElementById("comment").value;
 
   db.collection("comments").add({
     page: pageId,
-    name: name,
-    text: text,
+    name,
+    text,
     time: Date.now()
   }).then(() => {
-    document.getElementById("comment").value = "";
-    postBtn.innerText = "Post Comment";
-    postBtn.disabled = false;
-  }).catch(err => {
-    alert("Error posting comment");
-    console.error(err);
-    postBtn.innerText = "Post Comment";
-    postBtn.disabled = false;
+    alert("✅ Comment posted");
+  }).catch(e => {
+    alert("❌ Write failed: " + e.message);
   });
-});
-
-// XSS protection
-function escapeHTML(str) {
-  return str.replace(/[&<>"']/g, m => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;"
-  }[m]));
-  }
+};
