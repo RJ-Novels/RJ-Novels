@@ -76,30 +76,9 @@
 <main>
     {{ content }}
     {% if page.collection == "novels" %}
-<section class="comments-box">
-  <h3>What do you think?</h3>
 
-  <div id="reaction-bar">
-    <button data-r="like">👍</button>
-    <button data-r="funny">😂</button>
-    <button data-r="love">😍</button>
-    <button data-r="sad">😢</button>
-    <button data-r="angry">😡</button>
-  </div>
-
-  <div id="comments-list"></div>
-
-  <div class="comment-form">
-  <input id="name" placeholder="Your name">
-  <textarea id="comment" placeholder="Start the discussion..."></textarea>
-  <button id="postComment">Post Comment</button>
-    </div>
-    </section>
 {% endif %}
 </main>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-<script src="/assets/js/comments.js"></script>
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
 </html>
