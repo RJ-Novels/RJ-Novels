@@ -402,9 +402,27 @@ body {
   filter: drop-shadow(0 0 1px #000)
           drop-shadow(0 0 1px #000);
     }
-.giscus a[href*="github.com"] {
-  display: none !important;
-    }
-.giscus-comments iframe {
-    --giscus-hide-category: 1; /* hide category badge inside iframe */
+.comment-box {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.comment-box input,
+.comment-box textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.comment-box button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.comment {
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
       }
