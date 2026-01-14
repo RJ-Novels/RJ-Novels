@@ -16,6 +16,7 @@ const pageId = window.location.pathname;
 // Elements
 const list = document.getElementById("comments-list");
 const postBtn = document.getElementById("postComment");
+if (!postBtn) return;
 
 // Load comments (LIVE)
 db.collection("comments")
