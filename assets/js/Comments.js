@@ -53,9 +53,10 @@ onSnapshot(q, snap => {
     const c = doc.data();
     list.innerHTML += `
       <div class="comment">
-        <strong>${c.name}</strong>
-        <p>${c.text}</p>
-      </div>
+    <strong>${data.name}</strong>
+    <time>${new Date(data.time).toLocaleString()}</time>
+    <p>${data.text}</p>
+  </div>
     `;
   });
 });
