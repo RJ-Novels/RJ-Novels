@@ -375,11 +375,12 @@ body {
   filter: drop-shadow(0 0 1px #000)
           drop-shadow(0 0 1px #000);
     }
+/* Comments */
   .comments-box {
   max-width: 700px;
   margin: 50px auto;
   padding: 20px;
-  background: #0e0e0e;
+  background: var(--bg);
   border-radius: 12px;
   color: #fff;
 }
