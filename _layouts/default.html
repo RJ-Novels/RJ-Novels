@@ -76,19 +76,7 @@
 <main>
     {{ content }}
     {% if page.collection == "novels" %}
-<hr>
 
-<div id="comments-section">
-  <h3 class="comments-title">Comments</h3>
-
-  <div id="comments-list"></div>
-
-  <div class="comment-box">
-    <input id="name" placeholder="Your name" />
-    <textarea id="comment" placeholder="Write a comment..."></textarea>
-    <button onclick="postComment()">Post Comment</button>
-  </div>
-</div>
 {% endif %}
 </main>
 <script type="module" src="{{ '/assets/js/comments.js' | relative_url }}"></script>
