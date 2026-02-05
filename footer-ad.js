@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
        target="_blank"
        rel="noopener noreferrer">
       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDvAVtw0MhB2PE7m4Wf4ygK5Zj6tHRh1vNLU9AHQ5vCayfEC8d5dv6EoMekR7XwJGuOT-J4lL9nixxO_nMiok7CAByXgd2QvHA6bA7x-la6-0nKzot3sbNnDzWUx9R6_GPEuBCMsgzfrOUqCFEcX1FsF8g_i5NsfR7IGPnyDeFNSXkw1nJ-nGVDDPdXtc/s1280/20260205_234955.png" 
-           alt="Footer Ad">
+           alt="Footer Ad"
+           style="width:70%; height:40%;">
     </a>
   `;
 
