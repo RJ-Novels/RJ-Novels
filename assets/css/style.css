@@ -376,3 +376,62 @@ body {
           drop-shadow(0 0 1px #000);
     }
   
+/* ===== 404 PAGE BACKGROUND ===== */
+.error-404-bg {
+  min-height: 80vh;
+  background-image: url("https://i.postimg.cc/SNwJV9k2/rj-88wey72.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* blur + dark overlay */
+.error-404-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* content */
+.error-404 {
+  position: relative;
+  text-align: center;
+  padding: 40px 25px;
+  max-width: 500px;
+}
+
+/* heading */
+.error-404 h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 6rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* text */
+.error-404 p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 28px;
+}
+
+/* button */
+.error-404 .btn-home {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 24px;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.error-404 .btn-home:hover {
+  background: #334155;
+}
